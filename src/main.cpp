@@ -9,11 +9,11 @@
 #define OS_THREAD_ATTR_DETACH           0x0008u        // detached
 #define OS_THREAD_ATTR_PINNED_AFFINITY  0x0010u        // pinned (affinitized) to a single core
 #define OS_THREAD_ATTR_CHECK_STACK_USE  0x0040u        // check for stack usage
-#define OS_THREAD_ATTR_NAME_SENT        0x0080u  		//tkttttttttttttttttttt zebi
+#define OS_THREAD_ATTR_NAME_SENT        0x0080u  	   //tkttttttttttttttttttt zebi
 
 extern "C" int Installer(int argc, char** argv) {
 	//Loading..
-	log_print("Starting CppThread\n");
+	log_print("Starting..\n");
 
 	uint8_t *stack = (uint8_t*)MEM2_alloc(0x1000, 0x10);
 	OSThread *thread = (OSThread*)MEM2_alloc(0x1000, 0x10);
@@ -32,7 +32,7 @@ extern "C" int Installer(int argc, char** argv) {
 		return -3;
 	}
 
-	OSSetThreadName(thread, "ThreadGame");
+	OSSetThreadName(thread, "WiiUThreadGame");
 	OSResumeThread(thread);
 
 	return -3;
