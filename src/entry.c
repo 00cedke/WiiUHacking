@@ -27,8 +27,8 @@ int __entry(int argc, char** argv)
 	init_kernel_syscalls();
 
 	log_init();
-	log_printf("\n\n\n---------------[POWERED BY ANOLYNETWORK]---------------\nWiiUThreadCpp by cedkeChat and Azaee\n");
-    log_printf("STarting Thread..\n\n");
+	log_printf("\n\n\n---------------[POWERED BY ANOLYNETWORK]---------------\nWiiUHacking by cedkeChat and Azaee\n");
+    log_printf("Starting..\n\n");
 
-	return Installer(argc, argv);
+	return ThreadMenu(argc, argv);
 }

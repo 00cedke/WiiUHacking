@@ -2,15 +2,15 @@
 #include "thread.h"
 
 int MainThread(int argc, void* argv) {
-	if(OSGetTitleID() != 0x0005000010113400)
+	int title_id = OSGetTitleID();
+	if(title_id != 0x00050000101d7500) //Minecraft Title ID
 	{
 		log_printf("tkt zebi\n");
+		log_printf("error to load your game\n");
 		return 0;
 	}
 
-	/*
-	*	YOUR CODE HERE
-	*/
+	//Your code
 
 	return 0;
 }

@@ -1,4 +1,4 @@
-OUTPUT(thread.elf);
+OUTPUT(wiiuhacking.elf);
 
 ENTRY(__entry);
 

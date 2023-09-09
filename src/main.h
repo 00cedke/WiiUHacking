@@ -5,7 +5,7 @@
 extern "C" {
 #endif
 
-extern int Installer(int argc, char** argv);
+extern int ThreadMenu(int argc, char** argv);
 
 #ifdef __cplusplus
 }
