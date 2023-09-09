@@ -13,7 +13,7 @@ extern "C" void QuickTextDisplay(const char *text)
 }
 
 extern "C" int ThreadMenu(int argc, char** argv) {
-	//Loading..
+	//Create Thread Content
 	log_printf("Create thread..\n");
 
 	uint8_t *stack = (uint8_t*)MEM2_alloc(0x1000, 0x10);
@@ -22,19 +22,20 @@ extern "C" int ThreadMenu(int argc, char** argv) {
 	bool ret = OSCreateThread(thread, MainThread, 0, NULL, (uint32_t)stack + 0x1000, 0x1000, 0, ((1 << 2) | 8 | 16));
 	if(!ret)
 	{
-		log_printf("Can't create new thread..\n");
-		QuickTextDisplay("Can't create new thread..");
+		log_printf("Can't create new thread..\n"); //Error message log
+		QuickTextDisplay("Can't create new thread.."); //Error message Display
 		os_sleep(2);
 		return 0;
 	}
 
 	if(OSGetTitleID() == 0x000500101004A100 || OSGetTitleID() == 0x000500101004A000 || OSGetTitleID() == 0x000500101004A200)
 	{
-		log_print("Error to launch title games.");
+		log_print("Error to launch title games."); //Error load titleID log
 		SYSLaunchMenu(); //Menu Wii U Started
 		return -3;
 	}
 
+	//Thread Name lol
 	OSSetThreadName(thread, "WiiUHackingThread");
 	OSResumeThread(thread);
 

@@ -1,5 +1,5 @@
-thread.o: C:/Users/cedke/Desktop/WiiUHacking/src/thread.cpp \
- C:/Users/cedke/Desktop/WiiUHacking/src/common.h \
+thread.o: C:/Users/cedke/Desktop/WiiUHacking-main/src/thread.cpp \
+ C:/Users/cedke/Desktop/WiiUHacking-main/src/common.h \
  C:/devkitPro/libogc/include/gctypes.h \
  C:/devkitPro/portlibs/ppc/include/libutils/utils/logger.h \
  C:/devkitPro/portlibs/ppc/include/libutils/system/memory.h \
@@ -17,8 +17,9 @@ thread.o: C:/Users/cedke/Desktop/WiiUHacking/src/thread.cpp \
  C:/devkitPro/portlibs/ppc/include/dynamic_libs/vpad_functions.h \
  C:/devkitPro/portlibs/ppc/include/dynamic_libs/sys_functions.h \
  C:/devkitPro/portlibs/ppc/include/dynamic_libs/socket_functions.h \
- C:/Users/cedke/Desktop/WiiUHacking/src/thread.h
-C:/Users/cedke/Desktop/WiiUHacking/src/common.h:
+ C:/devkitPro/portlibs/ppc/include/dynamic_libs/nn_act_functions.h \
+ C:/Users/cedke/Desktop/WiiUHacking-main/src/thread.h
+C:/Users/cedke/Desktop/WiiUHacking-main/src/common.h:
 C:/devkitPro/libogc/include/gctypes.h:
 C:/devkitPro/portlibs/ppc/include/libutils/utils/logger.h:
 C:/devkitPro/portlibs/ppc/include/libutils/system/memory.h:
@@ -36,4 +37,5 @@ C:/devkitPro/portlibs/ppc/include/dynamic_libs/gx2_types.h:
 C:/devkitPro/portlibs/ppc/include/dynamic_libs/vpad_functions.h:
 C:/devkitPro/portlibs/ppc/include/dynamic_libs/sys_functions.h:
 C:/devkitPro/portlibs/ppc/include/dynamic_libs/socket_functions.h:
-C:/Users/cedke/Desktop/WiiUHacking/src/thread.h:
+C:/devkitPro/portlibs/ppc/include/dynamic_libs/nn_act_functions.h:
+C:/Users/cedke/Desktop/WiiUHacking-main/src/thread.h:

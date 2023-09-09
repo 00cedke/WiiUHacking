@@ -10,6 +10,7 @@
 #include <dynamic_libs/vpad_functions.h>
 #include <dynamic_libs/sys_functions.h>
 #include <dynamic_libs/socket_functions.h>
+#include <dynamic_libs/nn_act_functions.h>
 
 #define RETURN_TO_HBL 			(0)
 #define RETURN_TO_NEXT_APP 		(-3)
