@@ -1,4 +1,4 @@
-> project by cedkeChat and Azaee
+> Project Created by cedkeChat and Azaee :)
 
 # WiiUHacking
 Created by cedkeChat And Azaee
