@@ -1,3 +1,5 @@
+> project by cedkeChat and Azaee
+
 # WiiUHacking
 Created by cedkeChat And Azaee
 
@@ -9,5 +11,5 @@ it's very easy to use if you know the basics of code in C++ and to create an .el
 You must install libutils, dynamic_libs and libkernel.
 
 # Credits
-cedkeChat for the Thread Code.
-Azaee for the Kernel Games and Loader.
+cedkeChat for the Thread Codes.
+Azaee for the Kernel Codes.
