@@ -11,4 +11,4 @@ it's very easy to use if you know the basics of code in C++ and to create an .el
 You must install libutils, dynamic_libs and libkernel for make elf.
 
 # How to get cheat code ?
-<img src="https://imgur.com/a/czi8v8r">
+![image1](https://imgur.com/aoM12TF)
