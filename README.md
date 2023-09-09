@@ -1,4 +1,4 @@
-> Project Created by cedkeChat and Azaee :)
+> Project Created by cedkeChat.
 
 # WiiUHacking
 Created by cedkeChat And Azaee
@@ -9,7 +9,3 @@ it's very easy to use if you know the basics of code in C++ and to create an .el
 
 # How to make it ?
 You must install libutils, dynamic_libs and libkernel for make elf.
-
-# Credits
-cedkeChat for the Thread Codes.
-Azaee for the Kernel Codes.
