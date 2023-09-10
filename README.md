@@ -12,3 +12,4 @@ You must install libutils, dynamic_libs and libkernel for make elf.
 
 # How to active cheat code ?
 ![image1](https://i.imgur.com/OkdiZVG.png)
+You need connect libs kernel with writeKernel functions.
