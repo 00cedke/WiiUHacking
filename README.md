@@ -1,7 +1,5 @@
-> Project Created by cedkeChat.
-
-# WiiUHacking
-Created by cedkeChat And Azaee
+#WiiUHacking
+> Project Created by cedkeChat and Azaee
 
 # What is it ?
 it's a program that allows to create hacks for the games you want only in C++.
