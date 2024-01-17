@@ -13,4 +13,4 @@ You must install libutils, dynamic_libs and libkernel for make .elf.
 You need libkernel for add function writeKernelMemory !
 
 # Credit
-Thanks Azaee for helping project !
+Thanks for nt-games for devkitpro help.
