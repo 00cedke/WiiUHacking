@@ -13,5 +13,5 @@ You must install libutils, dynamic_libs and libkernel for make .elf.
 You need to have libkernel for add function writeKernelMemory for get cheat on your game !
 
 # Credit
-Thanks cedkeChat01 for made project.
-Thanks nt-games for devkitpro wiiu-pkgs help.
+- Thanks cedkeChat01 for made project.
+- Thanks nt-games for devkitpro wiiu-pkgs help.
