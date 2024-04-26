@@ -27,7 +27,7 @@ int __entry(int argc, char **argv) {
 	g_alreadyStarted++;
 
 	log_init();
-	log_printf("\n\n\n==================\nWiiUHacking by cedkeChat and Azaee\n");
+	log_printf("\n\n\n==================\nWiiUHacking by cedkeChat01\n");
 	log_printf("https://github.com/00cedke/WiiUHacking/\n\n");
 
 	return InstallerThread(argc, argv);
