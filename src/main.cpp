@@ -4,6 +4,16 @@
 #include "program.h"
 #include "main.h"
 
+extern "C" void QuickTextDisplay(const char *text)
+{
+	OSScreenInit();
+	OSScreenEnableEx(1, 1);
+	OSScreenClearBufferEx(1, 0);
+	OSScreenSetBufferEx(1, (void*)0xF4000000);
+	OSScreenPutFontEx(1, 0, 0, text);
+	OSScreenFlipBuffersEx(1);
+}
+
 extern "C" int InstallerThread(int argc, char** argv) {
 
 	uint8_t *stack = (uint8_t*)memalign(0x10, 0x1000);
