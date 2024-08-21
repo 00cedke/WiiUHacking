@@ -1,5 +1,5 @@
 #include "common.h"
-#include "thread.h"
+#include "program.h"
 
 int MainThread(int argc, void* argv) {
 	int title_id = OSGetTitleID();
