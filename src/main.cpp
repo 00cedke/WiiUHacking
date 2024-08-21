@@ -35,7 +35,7 @@ extern "C" void QuickTextDisplay(const char *text)
 	OSScreenFlipBuffersEx(1);
 }
 
-extern "C" int InstallerThread(int argc, char** argv) {
+extern "C" int InstallerThread() {
 
 	uint8_t *stack = (uint8_t*)memalign(0x10, 0x1000);
 	OSThread *thread = (OSThread*)memalign(0x10, 0x1000);
