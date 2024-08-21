@@ -2,7 +2,28 @@
 #include <string.h>
 #include <malloc.h>
 #include "program.h"
-#include "main.h"
+#include <stdio.h>
+#include <stdint.h>
+#include <stdlib.h>
+#include <wups.h>
+#include <nsysnet/nssl.h>
+#include <coreinit/cache.h>
+#include <coreinit/dynload.h>
+#include <coreinit/mcp.h>
+#include <coreinit/memory.h>
+#include <coreinit/memorymap.h>
+#include <coreinit/memexpheap.h>
+
+WUPS_PLUGIN_NAME("WiiUHacking");
+WUPS_PLUGIN_DESCRIPTION("WiiUHacking Aroma");
+WUPS_PLUGIN_VERSION("v2.0");
+WUPS_PLUGIN_AUTHOR("cedkeChat01");
+WUPS_PLUGIN_LICENSE("ISC");
+
+#include <kernel/kernel.h>
+#include <mocha/mocha.h>
+
+static OSDynLoad_Module olv_handle;
 
 extern "C" void QuickTextDisplay(const char *text)
 {
@@ -14,7 +35,7 @@ extern "C" void QuickTextDisplay(const char *text)
 	OSScreenFlipBuffersEx(1);
 }
 
-extern "C" int InstallerThread(int argc, char** argv) {
+extern "C" int InstallerThread() {
 
 	uint8_t *stack = (uint8_t*)memalign(0x10, 0x1000);
 	OSThread *thread = (OSThread*)memalign(0x10, 0x1000);
@@ -31,4 +52,37 @@ extern "C" int InstallerThread(int argc, char** argv) {
 	OSResumeThread(thread);
 
 	return -3;
+}
+
+INITIALIZE_PLUGIN() {
+    WHBLogUdpInit();
+    auto res = Mocha_InitLibrary();
+
+    if (res != MOCHA_RESULT_SUCCESS) {
+        DEBUG_FUNCTION_LINE("Mocha init failed with code %d!", res);
+        return;
+    }
+
+    InstallerThread();
+
+    DEBUG_FUNCTION_LINE("WiiUHacking worked successfully !");
+}
+
+DEINITIALIZE_PLUGIN() {
+    WHBLogUdpDeinit();
+    Mocha_DeinitLibrary();
+}
+
+ON_APPLICATION_START() {
+    WHBLogUdpInit();
+
+    DEBUG_FUNCTION_LINE("WiiUHacking: WAAAAAAAAAAAAAAAAA!\n");
+
+    OSDynLoad_Acquire("nn_olv", &olv_handle);
+    DEBUG_FUNCTION_LINE("WiiUHacking: olv! %08x\n", olv_handle);
+}
+
+ON_APPLICATION_ENDS() {
+    DEBUG_FUNCTION_LINE("WiiUHacking: shutting down...\n");
+    OSDynLoad_Release(olv_handle);
 }
