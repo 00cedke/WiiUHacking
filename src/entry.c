@@ -27,8 +27,8 @@ int __entry(int argc, char** argv)
 	init_kernel_syscalls();
 
 	log_init();
-	log_printf("\n\n\n---------------[POWERED BY ANOLYNETWORK]---------------\nWiiUHacking by cedkeChat and Azaee\n");
+	log_printf("\n\n\n---------------[POWERED BY WIIUHACKING]---------------\nWiiUHacking by cedkeChat01\n");
     log_printf("Starting Thread..\n\n");
 
-	return ThreadMenu(argc, argv);
+	return InitThread(argc, argv);
 }
