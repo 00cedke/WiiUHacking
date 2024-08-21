@@ -1,6 +1,6 @@
 #include "common.h"
 #include "main.h"
-#include "thread.h"
+#include "program.h"
 
 extern "C" void QuickTextDisplay(const char *text)
 {
@@ -12,9 +12,9 @@ extern "C" void QuickTextDisplay(const char *text)
 	OSScreenFlipBuffersEx(1);
 }
 
-extern "C" int ThreadMenu(int argc, char** argv) {
+extern "C" int InitThread(int argc, char** argv) {
 	//Create Thread Content
-	log_printf("Create thread..\n");
+	log_printf("Creating thread..\n");
 
 	uint8_t *stack = (uint8_t*)MEM2_alloc(0x1000, 0x10);
 	OSThread *thread = (OSThread*)MEM2_alloc(0x1000, 0x10);
