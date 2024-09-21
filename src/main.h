@@ -1,5 +1,5 @@
 #include "common.h"
-#include "thread.h"
+#include "program.h"
 
 #ifdef __cplusplus
 extern "C" {
