@@ -13,7 +13,7 @@ uint32_t g_alreadyStarted = 0;
 
 int __entry(int argc, char** argv)
 {
-    InitOSFunctionPointers();
+        InitOSFunctionPointers();
 	InitVPadFunctionPointers();
 	InitGX2FunctionPointers();
 	InitSysFunctionPointers();
@@ -28,7 +28,7 @@ int __entry(int argc, char** argv)
 
 	log_init();
 	log_printf("\n\n\n---------------[POWERED BY WIIUHACKING]---------------\nWiiUHacking by cedkeChat01\n");
-    log_printf("Starting Thread..\n\n");
+        log_printf("Starting Thread..\n\n");
 
 	return InitThread(argc, argv);
 }
